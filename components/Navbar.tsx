@@ -36,13 +36,13 @@ export default function Navbar() {
             <motion.span
                 variants={navVariants}
                 className={`
-					h-[8vh] padding-x fixed top-0 z-50 
+					h-[8vh] padding-x fixed z-50 
 					backdrop-blur-[7px] sm:hidden xm:hidden md:hidden
 					transition-all duration-1000 ease-in-out mx-auto
 					${
 						isScrolled
-							? "flex justify-center items-center px-4 py-2 w-[50%] left-1/4 right-1/4 rounded-full"
-							: "flex items-center justify-between w-full "
+							? "flex justify-center items-center px-4 py-2 w-[50%] left-1/4 right-1/4 rounded-full top-4"
+							: "flex items-center justify-between w-full top-0"
 					}
 				`}
                 animate={hidden ? "hidden" : "visible"}
