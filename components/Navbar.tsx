@@ -38,6 +38,16 @@ export default function Navbar() {
 
     return (
         <div className={`mx-auto ${isScrolled ? 'rounded-full overflow-hidden' : ''}`}>
+            {/* Background blur effect */}
+            {activeItem !== null && (
+                <motion.div
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 bg-black/40 backdrop-blur-md transition-all duration-1000"
+                    style={{ zIndex: 45 }}
+                />
+            )}
+
             <motion.span
                 variants={navVariants}
                 className={`
@@ -104,7 +114,7 @@ export default function Navbar() {
 
                                 {shouldShowHoverCard(item.title) && (
                                     <HoverCard
-                                    isVisible={activeItem === item.id}
+                                        isVisible={activeItem === item.id}
                                         item={item}
                                         onClose={() => setActiveItem(null)}
                                     />
