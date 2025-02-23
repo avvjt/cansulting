@@ -9,10 +9,12 @@ import { navbarItems } from "@/constants";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import MobileNav from "./MobileNav";
 import WordRotate from "@/components/WordRotate";
+import { HoverCard } from "./HoverCard";
 
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeItem, setActiveItem] = useState<number | null>(null);
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -23,7 +25,6 @@ export default function Navbar() {
             setHidden(false);
         }
 
-        // Add scroll state
         if (latest > 20) {
             setIsScrolled(true);
         } else {
@@ -31,28 +32,32 @@ export default function Navbar() {
         }
     });
 
+    const shouldShowHoverCard = (title: string): boolean => {
+        return ["Influidity", "GrowthStory", "Consulting"].includes(title);
+    };
+
     return (
         <div className={`mx-auto ${isScrolled ? 'rounded-full overflow-hidden' : ''}`}>
             <motion.span
                 variants={navVariants}
                 className={`
-					h-[8vh] padding-x fixed z-50 
-					backdrop-blur-[7px] sm:hidden xm:hidden md:hidden
-					transition-all duration-1000 ease-in-out mx-auto
-					${
-						isScrolled
-							? "flex justify-center items-center px-4 py-2 w-[50%] left-1/4 right-1/4 rounded-full top-4"
-							: "flex items-center justify-between w-full top-0"
-					}
-				`}
+                    h-[8vh] padding-x fixed z-50 
+                    backdrop-blur-[7px] sm:hidden xm:hidden md:hidden
+                    transition-all duration-1000 ease-in-out mx-auto
+                    ${
+                        isScrolled
+                            ? "flex justify-center items-center px-4 py-2 w-[50%] left-1/4 right-1/4 rounded-full"
+                            : "flex items-center justify-between w-full top-0"
+                    }
+                `}
                 animate={hidden ? "hidden" : "visible"}
             >
                 <div
                     className={`
-						flex items-center gap-x-8
-						transition-all duration-500 ease-in-out
-						${isScrolled ? "w-[95%] justify-center" : "w-full justify-between"}
-					`}
+                        flex items-center gap-x-8
+                        transition-all duration-500 ease-in-out
+                        ${isScrolled ? "w-[95%] justify-center" : "w-full justify-between"}
+                    `}
                 >
                     <Link href={"/"}>
                         <div className="flex items-center gap-x-1">
@@ -70,28 +75,41 @@ export default function Navbar() {
 
                     <div
                         className={`
-							flex items-center gap-x-[20px]
-							transition-all duration-500 ease-in-out
-							${isScrolled ? "w-fit" : "w-[50%]"}
-						`}
+                            flex items-center gap-x-[20px]
+                            transition-all duration-500 ease-in-out
+                            ${isScrolled ? "w-fit" : "w-[50%]"}
+                        `}
                     >
                         {navbarItems.map((item) => (
-                            <Link
+                            <div
                                 key={item.id}
-                                className={`
-									w-fit paragraph font-medium font-NeueMontreal 
-									text-secondry capitalize hover
-									transition-all duration-300
-									${isScrolled ? `visible` : `${item.id === 5 && "ml-auto"}`}
-									
-								`}
-                                href={item.href}
+                                className={`${item.id === 5 && !isScrolled ? "ml-auto" : ""} relative`}
+                                onMouseEnter={() => shouldShowHoverCard(item.title) ? setActiveItem(item.id) : null}
+                                onMouseLeave={() => shouldShowHoverCard(item.title) ? setActiveItem(null) : null}
                             >
-                                <TextHover
-                                    titile1={item.title}
-                                    titile2={item.title}
-                                />
-                            </Link>
+                                <Link
+                                    className={`
+                                        w-fit paragraph font-medium font-NeueMontreal 
+                                        text-secondry capitalize hover:underline
+                                        transition-all duration-300
+                                        ${!isScrolled && item.id === 5 ? 'ml-auto' : ''}
+                                    `}
+                                    href={item.href}
+                                >
+                                    <TextHover
+                                        titile1={item.title}
+                                        titile2={item.title}
+                                    />
+                                </Link>
+
+                                {shouldShowHoverCard(item.title) && (
+                                    <HoverCard
+                                    isVisible={activeItem === item.id}
+                                        item={item}
+                                        onClose={() => setActiveItem(null)}
+                                    />
+                                )}
+                            </div>
                         ))}
                     </div>
                 </div>
