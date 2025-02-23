@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className={`mx-auto ${isScrolled ? 'rounded-full overflow-hidden' : ''}`}>
             {/* Background blur effect */}
             {activeItem !== null && (
-                <motion.div
+                <motion.div 
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="fixed inset-0 bg-black/40 backdrop-blur-md transition-all duration-1000"

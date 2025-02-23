@@ -5,6 +5,7 @@ import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
 import { footerItems } from "@/constants";
 import { Heading, RoundButton } from "@/components";
+import RotatingArrow from "./RotatingArrow";
 
 export default function About() {
 	const [hovered, setHovered] = useState(false);
@@ -28,27 +29,26 @@ export default function About() {
 			</div>
 			<div className="w-full border-y border-[#21212155] my-[50px] py-[20px]">
 				<div className="padding-x pb-[50px] w-full flex sm:flex-col xm:flex-col gap-[30px] justify-between">
-					<div className="w-[50%] sm:w-full xm:w-full">
-						<h3 className="sub-paragraph font-medium text-secondry font-NeueMontreal">
-							Why it matters?
+					<div className="w-[28%] sm:w-full xm:w-full flex flex-col">
+						<h3 className="text-4xl font-medium text-secondry font-NeueMontreal">
+							What Defines us
 						</h3>
+						<div className="items-center justify-center">
+							<RotatingArrow/>
+						</div>
 					</div>
-					<div className="w-[50%] sm:w-full xm:w-full">
-						<div className="w-full flex gap-[30px] h-full items-end sm:items-start sm:flex-col xm:items-start xm:flex-col">
-							<div className="w-[40%] sm:w-[60%] xm:w-[60%]">
-								<p className="sub-paragraph font-medium font-NeueMontreal text-secondry tracking-wide">
-									We simplify business challenges and convert them into opportunities.
-									Whether building a strategy that works, fixing what's broken,
-									or unlocking the next growth chapter, we have your back.
+					<div className="w-[70%] sm:w-full xm:w-full">
+						<div className="w-full flex gap-[30px] h-full items-start sm:items-start sm:flex-col xm:items-start xm:flex-col">
+							<div className="w-[100%] sm:w-[60%] xm:w-[60%]">
+								<p className="font-semibold text-2xl font-NeueMontreal text-secondry tracking-wide">
+								We're brand builders at heart, creators by design, tech enthusiasts in practice, and integrated at our core.
 
 								</p>
 								<p className="sub-paragraph font-medium font-NeueMontreal text-secondry pt-[30px] tracking-wide">
-									In today's world, speed and clarity win.
-									We focus on actionable solutions that drive results—no jargon,
-									no overcomplications
+								We're on a mission to take the very best of Indian creative talent to the world. Driven by a ferocious hunger to create tangible impact for your business, we work with in-house specialists, industry partners and technology leaders to push the boundaries of creativity and put your brand on the global stage.
 								</p>
 							</div>
-							<div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">
+							{/* <div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">
 								<h1 className="sub-paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
 									S:
 								</h1>
@@ -62,7 +62,7 @@ export default function About() {
 										/>
 									))}
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

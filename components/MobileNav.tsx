@@ -37,12 +37,7 @@ export default function MobileNav() {
 						className="fixed top-0 bottom-0 right-0 z-50 w-full min-h-screen flex justify-end items-end flex-col bg-secondry">
 						<div className="w-full flex justify-between items-center h-[8vh] border-b border-[#f1f1f155] padding-x">
 							<Link href={"/"}>
-								<Image
-									src={mobileLogo}
-									alt="Influiditylogo"
-									width={70}
-									height={70}
-								/>
+								<p className="text-white text-2xl font-semibold">Influidity</p>
 							</Link>
 							<IoMdClose
 								onClick={() => setToggle(false)}
