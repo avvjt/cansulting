@@ -3,6 +3,7 @@ export { default as Rounded } from "./Rounded";
 export { default as Marquee } from "./Marquee";
 export { default as Navbar } from "./Navbar";
 export { default as Footer } from "./Footer";
+export { default as FooterV2 } from "./FooterV2";
 export { default as BackgroundImg } from './BackgroundImg';
 export { default as Button } from './Button';
 export { default as RoundButton } from './RoundButton';

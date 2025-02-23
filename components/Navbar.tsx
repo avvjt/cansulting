@@ -43,7 +43,7 @@ export default function Navbar() {
                 <motion.div
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 bg-black/40 backdrop-blur-md transition-all duration-1000"
+                    className="fixed inset-0 backdrop-blur-md transition-all duration-1000"
                     style={{ zIndex: 45 }}
                 />
             )}
