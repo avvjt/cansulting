@@ -43,21 +43,36 @@ import {
 export const navbarItems = [
   {
     id: 1,
-    // title: "About us",
     title: "Influidity",
     href: "/influidity",
+    description: "Experience seamless digital transformation with our innovative solutions.",
+    features: [
+      "AI-powered automation",
+      "Digital workflow optimization",
+      "Custom software solutions"
+    ]
   },
   {
     id: 3,
-    // title: "Services",
-    title: "Growth Story",
-    href: "/GrowthStory",
+    title: "GrowthStory",
+    href: "/growth-story",
+    description: "Accelerate your business growth with data-driven strategies.",
+    features: [
+      "Market analysis",
+      "Growth optimization",
+      "Performance tracking"
+    ]
   },
   {
     id: 2,
-    // title: "Our work",
     title: "Consulting",
     href: "/consulting",
+    description: "Expert guidance to transform your business challenges into opportunities.",
+    features: [
+      "Strategic planning",
+      "Digital transformation",
+      "Business optimization"
+    ]
   },
   {
     id: 4,
