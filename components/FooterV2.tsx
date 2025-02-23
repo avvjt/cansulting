@@ -4,29 +4,20 @@ import SocialLinks from "./SocialLinks";
 
 const FooterV2 = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-red-100 p-8 overflow-hidden rounded-2xl">
+        <div className="flex justify-center items-center min-h-screen bg-white p-8 overflow-hidden rounded-2xl border ">
             <div
-                className="relative w-full p-8 bg-black text-white rounded-3xl min-h-screen pt-10"
-                style={{
-                    clipPath: `
-                polygon(
-                  0 200px,
-                  40px 200px,
-                  40px 0,
-                  calc(100% - 400px) 0,
-                  calc(100% - 400px) 30px,
-                  100% 30px,
-                  100% 100%,
-                  0 100%
-                )
-              `,
-                }}
-            >
+                className="relative w-full p-8 bg-black text-white rounded-3xl min-h-screen pt-10" >
+                <SocialLinks />
+
+                <div onClick={() => window.scrollTo(-10, -10)} className="top-0 right-0 absolute p-3 bg-white text-black rounded-2xl m-1">
+                    <p>Sh*t I've gone too far, send me back up</p>
+                </div>
+
                 {/* Main Content */}
                 <div className="max-w-7xl mx-auto">
                     {/* Navigation */}
                     <nav className="flex justify-between items-start mb-20">
-                        <div>
+                        <div className="ml-10 mt-10">
                             <h1 className="text-4xl mb-4">
                                 Do you like
                                 <br />
@@ -56,7 +47,7 @@ const FooterV2 = () => {
 
                         <div className="flex gap-20">
                             <div>
-                                <h2 className="text-gray-500 mb-4">Learn</h2>
+                                <h2 className="text-gray-500 mb-4 mt-8">Learn</h2>
                                 <ul className="space-y-2">
                                     <li>About</li>
                                     <li>Culture</li>
@@ -69,7 +60,7 @@ const FooterV2 = () => {
                             </div>
 
                             <div>
-                                <h2 className="text-gray-500 mb-4">Explore</h2>
+                                <h2 className="text-gray-500 mb-4 mt-8">Explore</h2>
                                 <ul className="space-y-2">
                                     <li>Home</li>
                                     <li className="flex items-center gap-2">
@@ -87,7 +78,7 @@ const FooterV2 = () => {
                             </div>
 
                             <div>
-                                <h2 className="text-gray-500 mb-4">
+                                <h2 className="text-gray-500 mb-4 mt-8">
                                     Get in touch
                                 </h2>
                                 <ul className="space-y-2">
@@ -111,7 +102,7 @@ const FooterV2 = () => {
                     </nav>
 
                     {/* Bottom Text */}
-                    <div className="text-8xl font-light mt-40">
+                    <div className="text-8xl font-light mt-[8rem]">
                         Crafting since 2010
                     </div>
 
