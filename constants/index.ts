@@ -80,11 +80,6 @@ export const navbarItems = [
     title: "Career",
     href: "/career",
   },
-  {
-    id: 5,
-    title: "Contact us",
-    href: "/contact",
-  },
 ];
 
 // Footer
