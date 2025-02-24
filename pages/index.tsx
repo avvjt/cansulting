@@ -5,6 +5,7 @@ import { About, Cards, Clients, Hero, Projects, VideoHome } from "@/container";
 import TrustedPartners from "@/container/home-page/TrustedPartner";
 import WhatDefinesUs from "@/container/home-page/WhatDefinesUs";
 import RotatingArrow from "@/container/home-page/RotatingArrow";
+import Statistics from "@/container/home-page/Statistics";
 
 export default function Home() {
 	useEffect(() => {
@@ -31,9 +32,9 @@ export default function Home() {
 				<VideoHome />
 				<Projects />
 				
-				{/* <Clients /> */}
+				<Clients />
 				<Cards />
-				
+				<Statistics/>
 				<Ready />
 			</Curve>
 		</>

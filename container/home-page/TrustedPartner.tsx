@@ -134,7 +134,7 @@ const allLogos = [
 
 export default function TrustedPartners() {
   return (
-    <section className=" py-16 bg-[#f1f1f1]">
+    <section className=" py-8 bg-[#f1f1f1]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-3">
           Trusted Partners

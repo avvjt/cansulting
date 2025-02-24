@@ -38,7 +38,14 @@ const RotatingArrow: React.FC = () => {
       }} className="mt-16 ml-4"
     >
       {/* Arrow SVG */}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M3.41 2H16V0H1a1 1 0 0 0-1 1v16h2V3.41l28.29 28.3 1.41-1.41z" data-name="7-Arrow Up"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100" height="100">
+  <path 
+    d="M3.41 2H16V0H1a1 1 0 0 0-1 1v16h2V3.41l28.29 28.3 1.41-1.41z" 
+    fill="black" 
+    stroke="black" 
+    stroke-width="2" />
+</svg>
+
     </div>
   );
 };
