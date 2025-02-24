@@ -50,7 +50,7 @@ export default function Hero() {
               <div className="w-full flex mt-2 justify-between sm:w-full xm:w-full sm:flex-col xm:flex-col gap-[20px]">
                 <div className="w-[70%] flex flex-col gap-y-[40px] sm:w-full xm:w-full">
                   <div className="flex flex-col gap-y-[20px]">
-                    <p className="paragraph font-NeueMontreal text-secondry">
+                    <p className=" text-xl font-NeueMontreal text-secondry">
                       Business is not checking boxes or templates. It is solving real problems,
                       responding to change, and building something that lasts.
                       That is what Influidity Solution is all about. Founded in 2017,
@@ -64,7 +64,7 @@ export default function Hero() {
                   </div>
 
                   <div className="flex flex-col gap-y-[20px]">
-                    <p className="paragraph font-NeueMontreal text-secondry">
+                    <p className="text-xl  font-NeueMontreal text-secondry">
                       No fluff. No jargon. Just solutions designed to make your business move smarter,
                       adapt faster, and grow stronger. We are not in the business of selling services.
                       We are in the business of getting you where you need to be-through strategies
@@ -75,7 +75,7 @@ export default function Hero() {
                   </div>
 
                   <div className="flex flex-col gap-y-[20px]">
-                    <p className="paragraph font-NeueMontreal text-secondry">
+                    <p className="text-xl  font-NeueMontreal text-secondry">
                       The rules of business have changed. In a world where speed and precision are everything,
                       there’s no room for half-measures. Influidity Solution understands this.
                       We don't just advise; we build solutions that work in the real world, where challenges are constant,
@@ -85,7 +85,7 @@ export default function Hero() {
                   </div>
 
                   <div className="flex flex-col gap-y-[20px]">
-                    <p className="paragraph font-NeueMontreal text-secondry">
+                    <p className="text-xl  font-NeueMontreal text-secondry">
                       Never shortcuts and absolutely no "one-size-fits-all. "Our approach is based on the concept of "Perfection along Constraints.
                       " Whether it's identifying inefficiencies, improving customer experiences, or reducing costs that don't add value,
                       we focus on what moves the needle for you. We help organizations do more than adapt to change — we help them thrive in it.
