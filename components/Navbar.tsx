@@ -11,6 +11,7 @@ import MobileNav from "./MobileNav";
 import WordRotate from "@/components/WordRotate";
 import { HoverCard } from "./HoverCard";
 import { ArrowRight } from 'lucide-react';
+import { RoundButton } from ".";
 
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
@@ -108,7 +109,18 @@ export default function Navbar() {
                             </div>
                         ))}
                     </div>
-                    <Link rel="stylesheet" href="/contact" className="absolute flex flex-row gap-3 bg-black py-2 px-4 top-2 right-4 text-white font-bold rounded-xl">Contact US <ArrowRight /></Link>
+                    <div className="flex flex-col  items-center gap-[10px]">
+					<div className="flex items-center justify-between bg-secondry cursor-pointer mt-4 rounded-full group">
+						<RoundButton
+							href="/contact"
+							title="Contact us"
+							className="bg-white text-2xl py-2 text-black"
+							bgcolor="#000"
+							style={{ color: "#fff" }}
+						/>
+					</div>
+					
+				</div>
                 </div>
             </motion.span>
             <MobileNav />

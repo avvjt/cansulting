@@ -1,7 +1,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import SocialLinks from "./SocialLinks";
-
+import Link from "next/link";
 const FooterV2 = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-white p-8 overflow-hidden rounded-2xl border ">
@@ -23,8 +23,10 @@ const FooterV2 = () => {
                                 <br />
                                 what you see?
                             </h1>
-                            <button className="bg-[#CDFF00] text-black px-6 py-2 rounded-full flex items-center gap-2">
+                            <button className="bg-[#71edbc] text-black px-6 py-2 rounded-full flex items-center gap-2">
+                                <Link href="/contact">
                                 Start a project
+                                </Link>
                                 <span className="transform rotate-45">↑</span>
                             </button>
                             <div className="flex items-center gap-2 mt-4">
@@ -37,8 +39,8 @@ const FooterV2 = () => {
                                         <Star
                                             key={i}
                                             size={16}
-                                            fill="#CDFF00"
-                                            color="#CDFF00"
+                                            fill="#71edbc"
+                                            color="#71edbc"
                                         />
                                     ))}
                                 </div>
@@ -47,34 +49,88 @@ const FooterV2 = () => {
 
                         <div className="flex gap-20">
                             <div>
-                                <h2 className="text-gray-500 mb-4 mt-8">Learn</h2>
+                                <h2 className="text-gray-500 mb-4 mt-8">Quick Links</h2>
                                 <ul className="space-y-2">
-                                    <li>About</li>
-                                    <li>Culture</li>
-                                    <li>Testimonials</li>
-                                    <li>Processes</li>
-                                    <li>FAQs</li>
-                                    <li>Branding FAQs</li>
-                                    <li>Blog</li>
-                                </ul>
+                  <li>
+                    <Link
+                      href="/influidity"
+                      className="hover:text-primary transition-colors"
+                    >
+                        About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/consulting"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Consulting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/growthstory"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Growth Stories
+                    </Link>
+                  </li>
+                  
+                </ul>
                             </div>
 
                             <div>
                                 <h2 className="text-gray-500 mb-4 mt-8">Explore</h2>
                                 <ul className="space-y-2">
-                                    <li>Home</li>
-                                    <li className="flex items-center gap-2">
-                                        Work
-                                        <span className="bg-[#CDFF00] text-black text-xs px-2 py-0.5 rounded-full">
-                                            NEW
-                                        </span>
-                                    </li>
-                                    <li>Services</li>
-                                    <li>Careers</li>
-                                    <li>Sectors</li>
-                                    <li>Hex Test</li>
-                                    <li>Contact</li>
-                                </ul>
+                  <li>
+                  <Link
+                      href="/"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Home
+                    </Link>
+                    </li>
+                    <li>
+                    <Link
+                      href="/influidity"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Influidity
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/consulting"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Consulting
+                    </Link>
+                  </li>
+                  <li>
+                  <Link
+                      href="/growthstory"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Growth Story
+                    </Link>
+                    </li>
+                  <li>
+                    <Link
+                      href="/career"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Career
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/contact"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
                             </div>
 
                             <div>

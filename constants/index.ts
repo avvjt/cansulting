@@ -50,17 +50,58 @@ export const navbarItems = [
       "AI-powered automation",
       "Digital workflow optimization",
       "Custom software solutions"
+    ],
+    hoverItem: [
+      {
+        "full": "About Our Company",
+        "short": "About Us"
+      },
+      {
+        "full": "Meet Our Founders",
+        "short": "Founders"
+      },
+      {
+        "full": "Our Dedicated Team",
+        "short": "Team"
+      },
+      {
+        "full": "Our Core Values",
+        "short": "Core Value"
+      },
+      {
+        "full": "Our Unique Approach",
+        "short": "Approach"
+      }
     ]
   },
   {
     id: 3,
     title: "GrowthStory",
-    href: "/growth-story",
+    href: "/growthstory",
     description: "Accelerate your business growth with data-driven strategies.",
     features: [
       "Market analysis",
       "Growth optimization",
       "Performance tracking"
+    ],
+    hoverItem: [
+      {
+        "full": "Education Industry Insights",
+        "short": "Education"
+      },
+      {
+        "full": "Healthcare Sector Solutions",
+        "short": "Healthcare"
+      },
+      {
+        "full": "Real Estate Consulting",
+        "short": "Real estate"
+      },
+      {
+        "full": "Hospitality Business Growth",
+        "short": "Hospitality"
+      },
+
     ]
   },
   {
@@ -72,6 +113,24 @@ export const navbarItems = [
       "Strategic planning",
       "Digital transformation",
       "Business optimization"
+    ],
+    hoverItem: [
+      {
+        "full": "Expert Business Consulting",
+        "short": "Business Consulting"
+      },
+      {
+        "full": "Strategic Marketing Solutions",
+        "short": "Marketing Consulting"
+      },
+      {
+        "full": "HR Advisory Services",
+        "short": "HR Consulting"
+      },
+      {
+        "full": "Virtual CFO Solutions",
+        "short": "Virtual CFO"
+      },
     ]
   },
   {
@@ -79,6 +138,7 @@ export const navbarItems = [
     // title: "Insights",
     title: "Career",
     href: "/career",
+   
   },
 ];
 

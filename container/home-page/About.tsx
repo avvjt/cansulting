@@ -29,15 +29,16 @@ export default function About() {
 			</div>
 			<div className="w-full border-y border-[#21212155] my-[50px] py-[20px]">
 				<div className="padding-x pb-[50px] w-full flex sm:flex-col xm:flex-col gap-[30px] justify-between">
-					<div className="w-[28%] sm:w-full xm:w-full flex flex-col">
-						<h3 className="text-4xl font-medium text-secondry font-NeueMontreal">
-							What Defines us
+					<div className="w-[40%] sm:w-full xm:w-full flex flex-col">
+						<h3 className=" font-medium text-secondry font-NeueMontreal">
+							
+							<Heading title="What Defines us" />
 						</h3>
 						<div className="items-center justify-center">
 							<RotatingArrow/>
 						</div>
 					</div>
-					<div className="w-[70%] sm:w-full xm:w-full">
+					<div className="w-[58%] sm:w-full xm:w-full">
 						<div className="w-full flex gap-[30px] h-full items-start sm:items-start sm:flex-col xm:items-start xm:flex-col">
 							<div className="w-[100%] sm:w-[60%] xm:w-[60%]">
 								<p className="font-semibold text-2xl font-NeueMontreal text-secondry tracking-wide">
