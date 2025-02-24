@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import "@/styles/globals.css";
-import { Footer, Navbar } from "@/components";
+import { FooterV2, Navbar, Footer } from "@/components";
 import { AnimatePresence } from "framer-motion";
 import CustomCursor from "@/components/CustomCursor";
 export default function App({
@@ -32,7 +32,8 @@ export default function App({
       >
         <div className="fixed h-[700px] w-full bottom-0">
           <div>
-            <Footer />
+            <FooterV2 />
+            {/* <Footer /> */}
           </div>
         </div>
       </div>
