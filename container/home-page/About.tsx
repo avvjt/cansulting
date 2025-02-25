@@ -32,7 +32,7 @@ export default function About() {
 					<div className="w-[40%] sm:w-full xm:w-full flex flex-col">
 						<h3 className=" font-medium text-secondry font-NeueMontreal">
 							
-							<Heading title="What Defines us" />
+							<Heading title="Why it matters?" />
 						</h3>
 						<div className="items-center justify-center">
 							<RotatingArrow/>
@@ -42,11 +42,11 @@ export default function About() {
 						<div className="w-full flex gap-[30px] h-full items-start sm:items-start sm:flex-col xm:items-start xm:flex-col">
 							<div className="w-[100%] sm:w-[60%] xm:w-[60%]">
 								<p className="font-semibold text-2xl font-NeueMontreal text-secondry tracking-wide">
-								We're brand builders at heart, creators by design, tech enthusiasts in practice, and integrated at our core.
+								We simplify business challenges and convert them into opportunities. Whether building a strategy that works, fixing what's broken, or unlocking the next growth chapter, we have your back.
 
 								</p>
 								<p className="sub-paragraph font-medium font-NeueMontreal text-secondry pt-[30px] tracking-wide">
-								We're on a mission to take the very best of Indian creative talent to the world. Driven by a ferocious hunger to create tangible impact for your business, we work with in-house specialists, industry partners and technology leaders to push the boundaries of creativity and put your brand on the global stage.
+								In today's world, speed and clarity win. We focus on actionable solutions that drive results—no jargon, no overcomplications
 								</p>
 							</div>
 							{/* <div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">

@@ -138,19 +138,19 @@ const FooterV2 = () => {
                                     Get in touch
                                 </h2>
                                 <ul className="space-y-2">
-                                    <li>01942 894 596</li>
+                                    <li>91 0000000000</li>
                                     <li>hello@madebyshape.co.uk</li>
                                     <li className="mt-4">
-                                        MadeByShape
+                                    823 ,8th Floor, DLF Cybercity
                                         <br />
-                                        1 Gibfield Park Avenue
+                                        Idco Info Park, Technology Corridor,
                                         <br />
-                                        Atherton Manchester
+                                        Chandaka Industrial Estate, Patia,
                                         <br />
-                                        M46 0SU
+                                        Bhubaneswar, Odisha 751024
                                     </li>
                                     <li className="mt-4">
-                                        ///topped.little.pirate
+                                       
                                     </li>
                                 </ul>
                             </div>
@@ -159,18 +159,17 @@ const FooterV2 = () => {
 
                     {/* Bottom Text */}
                     <div className="text-8xl font-light mt-[8rem]">
-                        Crafting since 2010
+                        Crafting since 2017
                     </div>
 
                     {/* Footer */}
                     <div className="flex justify-between items-center mt-20 text-sm text-gray-500">
                         <div className="flex items-center gap-4">
-                            <span>Shape.</span>
-                            <span>© MadeByShape Ltd 2024</span>
-                            <span>Company Reg Number 10529058</span>
+                            <span>Influidity</span>
+                            <span>© Made by Influidity solutions</span>
+                            <span>Company Reg Number 0000000</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <span>Web Design Manchester</span>
                             <span>All Rights Reserved</span>
                             <span>Privacy Policy (you really care?)</span>
                         </div>

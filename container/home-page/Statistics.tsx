@@ -6,28 +6,31 @@ import React from "react";
 const Statistics: React.FC = () => {
   const stats = [
     {
-      title: "Clients",
-      value: "250+",
-      description:
-        "With over a decade of experience, Shape is an energetic, fresh and vibrant team offering creative talent and industry knowledge.",
+      title: "Ideas Delivered",
+      value: "500+",
+      description: "Innovative solutions crafted to drive success.",
     },
     {
-      title: "Referrals",
-      value: "55%",
-      description:
-        "Over 55% of our projects are referrals from clients already with us. Our clients love to spread the love far and wide.",
+      title: "Campaigns Launched",
+      value: "1000+",
+      description: "High-impact campaigns executed with precision.",
     },
     {
-      title: "Male:Female ratio",
-      value: "56:44",
-      description:
-        "In a male-dominated industry, we are proud to say we’re striving for equal gender roles at Shape.",
+      title: "Engagement Hours",
+      value: "20k+",
+      description: "Meaningful interactions fostering strong connections.",
+    },
+    {
+      title: "Client Satisfaction",
+      value: "98%",
+      description: "Trusted by clients with an exceptional approval rate.",
     },
   ];
+  
 
   return (
     <div className="bg-white py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-3 gap-12 text-black">
+      <div className="max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-4 gap-20 text-black">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
