@@ -77,7 +77,7 @@ export const navbarItems = [
   {
     id: 3,
     title: "GrowthStory",
-    href: "/growthstory",
+    href: "/GrowthStory",
     description: "Accelerate your business growth with data-driven strategies.",
     features: [
       "Market analysis",

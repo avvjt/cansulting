@@ -30,10 +30,10 @@ export default function About() {
 			<div className="w-full border-y border-[#21212155] my-[50px] py-[20px]">
 				<div className="padding-x pb-[50px] w-full flex sm:flex-col xm:flex-col gap-[30px] justify-between">
 					<div className="w-[40%] sm:w-full xm:w-full flex flex-col">
-						<h3 className=" font-medium text-secondry font-NeueMontreal">
+						<div className=" font-medium text-secondry font-NeueMontreal">
 							
 							<Heading title="Why it matters?" />
-						</h3>
+						</div>
 						<div className="items-center justify-center">
 							<RotatingArrow/>
 						</div>

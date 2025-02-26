@@ -16,7 +16,7 @@ import { RoundButton } from ".";
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
     // const [isScrolled, setIsScrolled] = useState(false);
-    const [activeItem, setActiveItem] = useState<number | null>(null);
+    const [activeItem, setActiveItem] = useState(null);
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -28,7 +28,7 @@ export default function Navbar() {
         }
     });
 
-    const shouldShowHoverCard = (title: string): boolean => {
+    const shouldShowHoverCard = (title) => {
         return ["Influidity", "GrowthStory", "Consulting"].includes(title);
     };
 

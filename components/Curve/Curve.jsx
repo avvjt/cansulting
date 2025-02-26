@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { text, curve, translate } from "@/motion";
 
 const routes = {
-  "/": "",
+  "/": "Great things aren’t rushed, and neither are we. While we put the finishing touches on what’s coming your way, take a second to breathe. Sometimes, the wait is part of the process.",
   "/GrowthStory": "Growth Story",
   "/consulting": "Consulting",
   "/influidity": "Influidity",
@@ -56,25 +56,13 @@ export default function Curve({ children, backgroundColor }) {
         className="fixed h w-full pointer-events-none left-0 top-0 z-50 bg-black"
       />
       <motion.p
-        className="absolute left-1/2 top-[40%] text-white text-[50px] z-[60] -translate-x-1/2 text-center"
-        {...anim(text)}
-      >
+  className={`absolute left-1/2 ${
+    router.route === "/" ? "top-[10%]" : "top-[40%]"
+  } text-white text-[50px] z-[60] -translate-x-1/2 text-center`}
+  {...anim(text)}
+>
         {routes[router.route]}
       </motion.p>
-
-      {/* Show additional lines only on the `/` route */}
-      {router.route === "/" && (
-        <motion.div
-          className="absolute left-1/2 top-[20%] text-white text-[20px] z-[60] -translate-x-1/2 text-center mt-4"
-          {...anim(text)}
-        >
-          <p className="text-5xl font-normal">Great things aren’t rushed, and neither are we.</p>
-          <p className="text-2xl font-medium mt-7">
-            While we put the finishing touches on what’s coming your way, take
-            a second to breathe. Sometimes, the wait is part of the process.
-          </p>
-        </motion.div>
-      )}
 
       {dimensions.width != null && <SVG {...dimensions} />}
       {children}
