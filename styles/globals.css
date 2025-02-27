@@ -42,6 +42,11 @@ body {
     mask-repeat: no-repeat;
   }
 
+  .half-line-space {
+    display: block;
+    content: "";
+    margin-top: -0.6em; /* Adjust this value to control the reduced space */
+}
   .mask-vertical {
     mask-image: linear-gradient(
       to bottom,

@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className={`mx-auto `}>
             {/* Background blur effect */}
             {activeItem !== null && (
-                <motion.div 
+                <motion.div
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="fixed inset-0 backdrop-blur-md transition-all duration-1000"
@@ -61,16 +61,21 @@ export default function Navbar() {
                     `}
                 >
                     <Link href={"/"}>
-                        <div className="flex items-center gap-x-1">
-                            <p className={`font-bold text-2xl `}>Influidity</p>
+                        <div className="flex items-center gap-x-1 group">
+                            <p className="text-3xl sm:text-3xl font-semibold font-FoundersGrotesk tracking-normal 
+        transition-all duration-500 group-hover:tracking-[0.05em] uppercase">
+                                Influidity
+                            </p>
                             <WordRotate
                                 words={["Creative", "Innovative", "Passionate"]}
-                                duration={1000}
-                                fontSize="1rem"
-                                className={`translate-y-8 font-bold`}
+                                duration={1500}
+                                fontSize="1.2rem"
+                                className="translate-y-2 font-bold font-NeueMontreal"
                             />
                         </div>
+
                     </Link>
+
 
                     <div
                         className={`
@@ -110,17 +115,17 @@ export default function Navbar() {
                         ))}
                     </div>
                     <div className="flex flex-col  items-center gap-[10px]">
-					<div className="flex items-center justify-between bg-secondry cursor-pointer mt-4 rounded-full group">
-						<RoundButton
-							href="/contact"
-							title="Contact us"
-							className="bg-white text-2xl py-2 text-black"
-							bgcolor="#000"
-							style={{ color: "#fff" }}
-						/>
-					</div>
-					
-				</div>
+                        <div className="flex items-center justify-between bg-secondry cursor-pointer mt-4 rounded-full group">
+                            <RoundButton
+                                href="/contact"
+                                title="Contact us"
+                                className="bg-white text-2xl py-2 text-black"
+                                bgcolor="#000"
+                                style={{ color: "#fff" }}
+                            />
+                        </div>
+
+                    </div>
                 </div>
             </motion.span>
             <MobileNav />
