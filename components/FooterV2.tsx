@@ -162,7 +162,7 @@ const FooterV2 = () => {
           </nav>
 
           {/* Bottom Text */}
-          <div className="text-8xl font-light mt-[8rem]">
+          <div className="text-8xl font-medium mt-[8rem]">
             Crafting since 2017
           </div>
 

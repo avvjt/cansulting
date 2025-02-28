@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import LogoWall from "../../components/LogoWall";
+import { Heading } from "@/components";
 
 // Split logos into two groups for alternating rows
 const allLogos = [
@@ -134,33 +135,64 @@ const allLogos = [
 
 export default function TrustedPartners() {
   return (
-    <section className=" py-8 bg-[#f1f1f1]">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-3">
-          Trusted Partners
-        </h2>
-        <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto text-center mb-12">
+    <section className="py-8 bg-[#f1f1f1] relative overflow-hidden border-none">
+      {/* Background Animation */}
+      <motion.div
+        className="absolute inset-0 z-0"
+        initial={{ backgroundPosition: "0% 50%" }}
+        animate={{ backgroundPosition: "100% 50%" }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "linear",
+        }}
+        style={{
+          background: "linear-gradient(270deg, #f1f1f1, #f0f0f0, #f1f1f1)",
+          backgroundSize: "300% 300%",
+        }}
+      />
+
+      <div className="max-w-7x2 mx-auto relative z-10">
+
+        <Heading
+          title="Trusted Partners"
+          className="padding-x padding-y pb-[10px] border-b border-[#21212155]"/>
+
+        <h1 className=" text-2xl font-normal padding-x font-NeueMontreal text-secondry m-8">
           Our clients are making moves. Are you? Don&apos;t get left behind—Join
           the brands leading the way with us.
-        </p>
+        </h1>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
           className="relative overflow-hidden"
         >
           {/* Gradient overlay for blur effect */}
-          {/* <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-[40%] bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" /> */}
+          <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-[#f1f1f1] to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-[30%] bg-gradient-to-l from-[#f1f1f1] to-transparent z-20 pointer-events-none" />
 
-          <motion.div className="py-8">
+          <motion.div
+            className="py-8"
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <LogoWall
-              items={allLogos} // Combine both logo arrays
+              items={allLogos.map((logo, index) => ({
+                ...logo,
+                hoverEffect: true,
+                headingClassName: "text-blue-600 text-2xl font-bold", // Add styles for heading
+                descriptionClassName: "text-gray-700 text-lg font-medium", // Add styles for description
+              }))}
               direction="horizontal"
               pauseOnHover={false}
               size="clamp(8rem, 1rem + 12vmin, 24rem)"
-              duration="60s" // Increased duration for combined logos
+              duration="60s"
               bgColor="#f1f1f1"
               bgAccentColor="#f1f1f1"
               textColor="#000000"
@@ -172,4 +204,3 @@ export default function TrustedPartners() {
     </section>
   );
 }
-

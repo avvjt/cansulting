@@ -9,6 +9,7 @@ interface LogoItem {
 }
 
 
+
 interface LogoWallProps {
   items?: LogoItem[];
   direction?: "horizontal" | "vertical";

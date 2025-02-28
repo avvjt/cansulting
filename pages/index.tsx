@@ -18,7 +18,7 @@ export default function Home() {
 	return (
 		<>
 			<Curve backgroundColor={"#f1f1f1"}>
-				
+
 				<Hero />
 				<div className="w-full bg-marquee z-10 relative rounded-t-[20px] padding-y">
 					<Marquee
@@ -31,10 +31,9 @@ export default function Home() {
 				{/* <RotatingArrow /> */}
 				<VideoHome />
 				<Projects />
-				
 				<Clients />
 				<Cards />
-				<Statistics/>
+				<Statistics />
 				<Ready />
 			</Curve>
 		</>
