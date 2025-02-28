@@ -50,21 +50,6 @@ export default function About() {
 									In today's world, speed and clarity win. We focus on actionable solutions that drive results—no jargon, no overcomplications
 								</p>
 							</div>
-							{/* <div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">
-								<h1 className="sub-paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-									S:
-								</h1>
-								<div className="flex flex-col">
-									{footerItems.map((item) => (
-										<LinkHover
-											key={item.id}
-											className="w-fit sub-paragraph font-medium capitalize before:h-[1px] after:h-[1px] before:bottom-[1px] after:bottom-[1px]"
-											title={item.title}
-											href={"/"}
-										/>
-									))}
-								</div>
-							</div> */}
 						</div>
 					</div>
 				</div>
