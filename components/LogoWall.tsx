@@ -8,8 +8,6 @@ interface LogoItem {
   description?: string;
 }
 
-
-
 interface LogoWallProps {
   items?: LogoItem[];
   direction?: "horizontal" | "vertical";
@@ -65,7 +63,6 @@ const LogoWall: FC<LogoWallProps> = ({
     "overflow-hidden",
     "transition-opacity",
     "duration-300",
-    
     direction === "vertical" ? "w-28 h-28" : "w-40 h-24",
   ]
     .filter(Boolean)
@@ -83,28 +80,6 @@ const LogoWall: FC<LogoWallProps> = ({
     .filter(Boolean)
     .join(" ");
 
-  // const LogoImage = ({
-  //   item,
-  //   keyPrefix,
-  // }: {
-  //   item: LogoItem;
-  //   keyPrefix: string;
-  // }) => (
-  //   <div className={imageContainerClass}>
-  //     <div className="relative w-full h-full p-2">
-  //       <Image
-  //         key={keyPrefix}
-  //         src={item.imgUrl}
-  //         alt={item.altText}
-  //         fill
-  //         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  //         className="object-contain filter grayscale opacity-60 hover:opacity-100 transition-opacity"
-  //         priority={false}
-  //       />
-  //     </div>
-  //   </div>
-  // );
-
   const LogoImage = ({
     item,
     keyPrefix,
@@ -113,7 +88,7 @@ const LogoWall: FC<LogoWallProps> = ({
     keyPrefix: string;
   }) => (
     <div className="flex flex-col items-center py-16 bg-[#f1f1f1]">
-      <div className={`${imageContainerClass} filter grayscale`}>
+      <div className={imageContainerClass}>
         <div className="relative w-full h-full p-2">
           <Image
             key={keyPrefix}
@@ -127,14 +102,12 @@ const LogoWall: FC<LogoWallProps> = ({
         </div>
       </div>
       {/* Box for Heading and Description */}
-      <div className="bg-[#f1f1f1] p-4 text-center w-40">
-        <h3 className="text-gray-500 font-bold text-sm">{item.heading}</h3>
-        <p className="text-gray-500 mt-2 text-xs">{item.description}</p>
+      <div className="bg-[#f1f1f1] p-4 text-center w-60 font-NeueMontreal">
+        <h3 className="text-black font-bold text-lg whitespace-nowrap overflow-hidden font-NeueMontreal line-clamp-1">{item.heading}</h3>
+        <p className="text-black font-normal mt-5 text-base font-NeueMontreal leading-none mb-5 line-clamp-2">{item.description}</p>
       </div>
     </div>
   );
-  
-  
 
   return (
     <article

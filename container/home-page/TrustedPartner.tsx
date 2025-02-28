@@ -186,8 +186,7 @@ export default function TrustedPartners() {
               items={allLogos.map((logo, index) => ({
                 ...logo,
                 hoverEffect: true,
-                headingClassName: "text-blue-600 text-2xl font-bold", // Add styles for heading
-                descriptionClassName: "text-gray-700 text-lg font-medium", // Add styles for description
+                
               }))}
               direction="horizontal"
               pauseOnHover={false}
